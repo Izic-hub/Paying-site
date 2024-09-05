@@ -2,18 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>paying site</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <br> &nbsp
- <strong>.<a href="home.html">Home</a></strong>
- &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-      <strong>.<a href="about.html">About us</a></strong>
-     &nbsp &nbsp &nbsp &nbsp &nbsp 
-  <strong>.<a href="contact.html">Contact us</a></strong>
-        <br><br>
+    <nav>
+    <div class="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  
+  
+     <div class="logo">
+  <svg width="150" height="150">
+    <g>
+      <path d="M100,50 C50,50 50,150 100,150 C150,150 150,50 100,50" fill="#7893a0f3" />
+      <path d="M70,70 H130 V130 H70 L70,70" fill="#d9edd9" />
+      
+      <text x="100" y="110" font-size="19" text-anchor="middle" fill="">izic✨</text>
+    </g>
+  </svg>
+</div>
      
    <center><h1><kbd>Izic✨ pay-go</kbd></h1></center>
     <p>
@@ -34,7 +51,7 @@
    <br>
      <input type="password" minlength="6" maxlength="8"  placeholder="confirm password">
      <br> <input type="tel" maxlength="10" placeholder="valid acct details" required>
-   <input type="text" placeholder="acc nõ" required>
+   <input type="text" placeholder="acc name" required>
    <br><br>
    <select>
 <optgroup label="current state of occupation"></optgroup>
@@ -57,7 +74,6 @@
             </center>
    </form>
    </fieldset>
-   
   
      <script src="script.js"></script>
 </body>
@@ -66,6 +82,60 @@
 
 
 <style>
+     nav{
+  background-color: none;
+  color: #fff;
+  padding: 0.5em;
+  margin: 0;
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+
+.hamburger-menu{
+  cursor: pointer;
+}
+
+.hamburger-menu span{
+  display: block;
+  width: 40px;
+  height: 4px;
+  background-color: black;
+  margin-bottom: 5px;
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+li{
+  margin-bottom: 10px;
+}
+
+ a{
+  color: #46555ddd;
+  text-decoration: none;
+} 
+.show{
+  display: block !important;
+} 
+    .logo svg {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.logo path {
+  stroke: #666;
+  stroke-width: 2;
+}
+
+.logo text {
+  font-family: fantasy;
+  }
 input{
     width: 250px;
     height: 40px;
@@ -88,9 +158,9 @@ button{
     margin-left: 4%;
     padding-left: 8px;
     font-family: fantasy;
-    background-color: #007bff;
-    color: #ffffff;
-    font-size: 16px;
+    background-color: cyan;
+    color: black;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
     cursor: pointer;
@@ -165,8 +235,22 @@ button{
      fieldset{
          border-radius: 5px;
    }
-     
+    
      p{
          font-family:  fantasy;
      }
+       *{
+           background-color: #eaffff;
+       }
 </style>
+
+
+
+<script>
+    const hamburgerMenu= document.querySelector('.hamburger-menu');
+const navMenu = document.querySelector('ul');
+
+hamburgerMenu.addEventListener('click', () => {
+  navMenu.classList.toggle('show');
+}); 
+</script>

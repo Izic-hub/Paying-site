@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>paying site</title>
-   <link rel="stylesheet" href="style css">
+   <link rel="stylesheet" href="style.css">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+    <div class="logo">
+  <svg width="150" height="150">
+    <g>
+      <path d="M100,50 C50,50 50,150 100,150 C150,150 150,50 100,50" fill="#7893a0f3" />
+      <path d="M70,70 H130 V130 H70 L70,70" fill="#d9edd9" />
+      
+      <text x="100" y="110" font-size="19" text-anchor="middle" fill="">izic✨</text>
+    </g>
+  </svg>
+</div>
+     
     <main>
         <section id="home">
    <h1>Welcome to pay-go</h1>
@@ -28,7 +39,7 @@
 <br><br>
 <b>Get Started!</b>
 <br>
-- Sign up for free today to start earning!<br>
+- <big><a href="index.html">Sign up</a></big> for free today to start earning!<br>
       </p>
     </section>
        </main>
@@ -38,6 +49,19 @@
 
 
 <style>
+        .logo svg {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.logo path {
+  stroke: #666;
+  stroke-width: 2;
+}
+
+.logo text {
+  font-family: fantasy;
+  }
     main{
        display: flex;
       flex-direction: column;
