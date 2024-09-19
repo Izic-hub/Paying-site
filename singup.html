@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>paying site</title>
+</head>
+<body>
+      
+ 
+  <header><em><h1>Upload Your Photo</h1></em></header>
+  <form id="upload-form">
+    <input type="file" id="photo-input" accept="image/*">
+    <button id="upload-button">Upload Photo</button>
+    <div id="uploaded-photo"></div>
+  </form> 
+
+
+    <fieldset>
+     <legend><big><strong>Sign up</strong></big></legend>
+     <form>
+   <input type="text" placeholder="First name" required>
+   <br>
+   <input type="text" placeholder="Last name" required>
+   <br>
+   <input type="email" placeholder="email@gmail.com" required>
+   <br>
+   <input type="password" minlength="6" maxlength="8"  placeholder="create password" required>
+   <br>
+     <input type="password" minlength="6" maxlength="8"  placeholder="confirm password">
+     <br> <input type="tel" maxlength="10" placeholder="valid acct details" required>
+   <input type="text" placeholder="acc name" required>
+   <br><br>
+   <select>
+ <optgroup><option label="current status of occupation"></option></optgroup>
+       <option>student</option>
+       <option>Employed</option>
+       <option>unemployed</option>
+       <option>skill worker</option>
+       <option>others...</option>
+   </select>
+   <br>
+   <input type="tel" maxlength="6" id="coupen" placeholder ="coupon code" required>
+   <br>
+   <button id="get"><a id="gc" href="https://wa.me/+2349064178174">Get code</a></button>
+   <br>
+  
+   <br><br>
+   <input type="checkbox" id="click">by clicking here you are sure that the data given are correct  
+     <center>
+                <button type="submit" class="button_1" id="submit-btn"><b><a href="main.html" loading="lazy">Proceed</a></b></button>
+            </center>
+   </form>
+   </fieldset>
+   <footer>
+      <p><kbd>Izic✨ pay-go</kbd>, Copyright &copy; 2024</p>
+    </footer>
+   <script src="script.js"></script>
+</body>
+</html>
+
+
+
+<style>
+     body{
+  font-family: Arial, sans-serif;
+}
+
+#upload-form {
+  width: 50%;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#photo-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 12px;
+}
+
+#upload-button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#upload-button:hover {
+  background-color: #3e8e41;
+}
+
+#uploaded-photo {
+  margin-top: 20px;
+}
+
+   input{
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 7px black;
+    border: none;
+    margin-top: 6%;
+    margin-left: 4%;
+    padding-left: 8px;
+    font-family: fantasy;
+}
+
+button{
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 7px black;
+    border: none;
+    margin-top: 6%;
+    margin-left: 4%;
+    padding-left: 8px;
+    font-family: fantasy;
+    background-color: cyan;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+#get{
+    width: 130px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 7px black;
+    border: none;
+    margin-top: 6%;
+    margin-left: 4%;
+    padding-left: 8px;
+    font-family: fantasy;
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+  background-color: red; 
+  transition: all 0.3s ease;
+  animation: color-change 5s infinite;
+}
+
+@keyframes color-change {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: green;
+  }
+  75% {
+    background-color: white;
+  }
+  100% {
+    background-color: cyan;
+  }
+
+}
+
+  #click{
+          width: 20px;
+          height:20px;
+          border-radius:10px;
+          box-shadow:1px 1px 7px black;
+          border: none;
+          margin-top:6%;
+          margin-left:4%;
+          padding-left: 8px;
+          font-family:fantasy;
+     }
+  select{
+  background-color: #24271751;
+  padding: 1em;
+  margin-bottom: 10px;
+  border-radius: 10px;
+               height: 40px;
+               width: 267px;
+               border-radius:10px;
+               box-shadow:1px 1px 7px black;
+               border:none;
+               margin-top:6%;
+               margin-left:3%;
+              padding-left:8px;
+              font-family:fantasy;
+}
+     fieldset{
+         border-radius: 5px;
+   }
+       *{
+           background-color: #eaffff;
+       }
+       #gc{
+           font-size: 20px;
+           background-color: #e0d7bba9;
+       }
+          footer{
+  padding:20px;
+  margin-top:20px;
+  color: black;
+  background-color: #aec8d1;
+  text-align: center;
+}
+</style>
+
+
+
+
+<script>
+const photoInput = document.getElementById('photo-input');
+const uploadButton = document.getElementById('upload-button');
+const uploadedPhoto = document.getElementById('uploaded-photo');
+const signUpForm = document.querySelector('fieldset form');
+
+let uploadedPhotoData;
+
+uploadButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  const file = photoInput.files[0];
+  const reader = new FileReader();
+
+  reader.onload = (e) => {
+    uploadedPhotoData = e.target.result;
+    uploadedPhoto.innerHTML = `<img src="${uploadedPhotoData}" alt="Uploaded Photo" width="100%">`;
+  };
+
+  reader.readAsDataURL(file);
+});
+
+signUpForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const formData = new FormData();
+  formData.append('photo', uploadedPhotoData);
+  // Add other form data here
+  // Submit the form data to your server
+});
+
+
+
+
+
+const proceedBtn = document.getElementById('submit-btn');
+
+proceedBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  const delay = 3000; // 5-second delay
+
+  // Disable button to prevent multiple clicks
+  proceedBtn.disabled = true;
+  proceedBtn.textContent = 'Redirecting...';
+
+  setTimeout(() => {
+    // Redirect to main.html after delay
+    window.location.href = 'main.html';
+  }, delay);
+});
+
+ 
+
+</script>
