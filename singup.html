@@ -2,65 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-    <title>paying site</title>
+    <title>Paying Site</title>
 </head>
 <body>
-      
- 
-  <header><em><h1>Upload Your Photo</h1></em></header>
-  <form id="upload-form">
-    <input type="file" id="photo-input" accept="image/*">
-    <button id="upload-button">Upload Photo</button>
-    <div id="uploaded-photo"></div>
-  </form> 
-
-
     <fieldset>
      <legend><big><strong>Sign up</strong></big></legend>
-     <form>
-   <input type="text" placeholder="First name" required>
-   <br>
-   <input type="text" placeholder="Last name" required>
-   <br>
-   <input type="email" placeholder="email@gmail.com" required>
-   <br>
-   <input type="password" minlength="6" maxlength="8"  placeholder="create password" required>
-   <br>
-     <input type="password" minlength="6" maxlength="8"  placeholder="confirm password">
-     <br> <input type="tel" maxlength="10" placeholder="valid acct details" required>
-   <input type="text" placeholder="acc name" required>
-   <br><br>
-   <select>
- <optgroup><option label="current status of occupation"></option></optgroup>
-       <option>student</option>
-       <option>Employed</option>
-       <option>unemployed</option>
-       <option>skill worker</option>
-       <option>others...</option>
-   </select>
-   <br>
-   <input type="tel" maxlength="6" id="coupen" placeholder ="coupon code" required>
-   <br>
-   <button id="get"><a id="gc" href="https://wa.me/+2349064178174">Get code</a></button>
-   <br>
-  
-   <br><br>
-   <input type="checkbox" id="click">by clicking here you are sure that the data given are correct  
-     <center>
-                <button type="submit" class="button_1" id="submit-btn"><b><a href="main.html" loading="lazy">Proceed</a></b></button>
-            </center>
-   </form>
-   </fieldset>
-   <footer>
+     <form id="signup-form" action="main.html">
+        <input type="file" id="photo-input" accept="image/*" required>
+        <div id="uploaded-photo"></div>
+
+        <input type="text" placeholder="First name" required>
+        <br>
+        <input type="text" placeholder="Last name" required>
+        <br>
+        <input type="email" placeholder="email@gmail.com" required>
+        <br>
+        <input type="password" id="create-password" minlength="6" maxlength="8" placeholder="Create password" required>
+        <br>
+        <input type="password" id="confirm-password" minlength="6" maxlength="8" placeholder="Confirm password" required>
+        <br> 
+        <input type="tel" maxlength="10" placeholder="Valid acct details" required>
+        <input type="text" placeholder="Acc name" required>
+        <br><br>
+        <select>
+            <optgroup><option label="Current status of occupation"></option></optgroup>
+            <option>Student</option>
+            <option>Employed</option>
+            <option>Unemployed</option>
+            <option>Skill Worker</option>
+            <option>Others...</option>
+        </select>
+        <br>
+        <input type="tel" maxlength="6" id="coupon" placeholder="Coupon code" required>
+        <br>
+        <button id="get"><a id="gc" href="https://wa.me/+2349064178174">Get code</a></button>
+        <br><br>
+      <input type="checkbox" id="click" required>by clicking here you are sure that the data given are correct.
+        <center>
+            <button type="submit" class="button_1" id="submit-btn"><b>Proceed</b></button>
+        </center>
+     </form>
+    </fieldset>
+
+    <footer>
       <p><kbd>Izic✨ pay-go</kbd>, Copyright &copy; 2024</p>
     </footer>
-   <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
-
 
 <style>
      body{
@@ -212,60 +203,82 @@ button{
   background-color: #aec8d1;
   text-align: center;
 }
+ #photo-input{
+    width: 60px;
+    height: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 7px black;
+    border: none;
+    margin-top: 6%;
+    margin-left: 4%;
+    padding-left: 8px;
+    font-family: fantasy;
 </style>
 
 
-
-
 <script>
-const photoInput = document.getElementById('photo-input');
-const uploadButton = document.getElementById('upload-button');
-const uploadedPhoto = document.getElementById('uploaded-photo');
-const signUpForm = document.querySelector('fieldset form');
+// Handling photo upload (as in your script)
+const photoInput = document.querySelector('#photo-input');
+const uploadedPhotoDiv = document.querySelector('#uploaded-photo');
 
-let uploadedPhotoData;
+photoInput.addEventListener('change', uploadPhoto);
 
-uploadButton.addEventListener('click', (e) => {
-  e.preventDefault();
+function uploadPhoto() {
   const file = photoInput.files[0];
-  const reader = new FileReader();
+  const allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
+  const fileType = file.type.split('/')[1];
 
+  if (!allowedExtensions.includes(fileType)) {
+    alert('Only images are allowed!');
+    photoInput.value = '';
+    return;
+  }
+
+  const reader = new FileReader();
   reader.onload = (e) => {
-    uploadedPhotoData = e.target.result;
-    uploadedPhoto.innerHTML = `<img src="${uploadedPhotoData}" alt="Uploaded Photo" width="100%">`;
+    const photoData = e.target.result;
+    uploadedPhotoDiv.innerHTML = `<img src="${photoData}" width="100" height="100">`;
+
+    // Simulating AJAX request to upload photo
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'upload.php', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.send(`photo=${photoData}`);
+
+    xhr.onload = () => {
+      if (xhr.status === 200) {
+        console.log('Photo uploaded successfully!');
+      } else {
+        console.log('Error uploading photo!');
+      }
+    };
   };
 
   reader.readAsDataURL(file);
+}
+
+// Form validation
+document.querySelector('#signup-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const createPassword = document.querySelector('#create-password').value;
+  const confirmPassword = document.querySelector('#confirm-password').value;
+  const couponCode = document.querySelector('#coupon').value;
+
+  // Check if passwords match
+  if (createPassword !== confirmPassword) {
+    alert('Passwords do not match!');
+    return;
+  }
+
+  // Check if coupon code is valid
+  if (couponCode !== '135700') {
+    alert('Invalid coupon code! Please enter the correct code.');
+    return;
+  }
+
+  // If everything is correct, submit the form
+  alert('Form submitted successfully!');
+  this.submit();  // Allows the form to be submitted now
 });
-
-signUpForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const formData = new FormData();
-  formData.append('photo', uploadedPhotoData);
-  // Add other form data here
-  // Submit the form data to your server
-});
-
-
-
-
-
-const proceedBtn = document.getElementById('submit-btn');
-
-proceedBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  const delay = 3000; // 5-second delay
-
-  // Disable button to prevent multiple clicks
-  proceedBtn.disabled = true;
-  proceedBtn.textContent = 'Redirecting...';
-
-  setTimeout(() => {
-    // Redirect to main.html after delay
-    window.location.href = 'main.html';
-  }, delay);
-});
-
- 
-
 </script>
