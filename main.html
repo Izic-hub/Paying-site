@@ -185,6 +185,30 @@
       <button type="button" id="claim-reward-btn">Claim Reward</button>
     </form>
   </div>
+  <li>
+        <kbd><em>.editors sponsor...</em></kbd>
+        <br>
+     contact <big>[+2349064178174]</big> for all catfish related deals<em> <br>for Consultant <br>for purchase(all sizes; fingerlings~broodstock) </em>
+     <em> <span class="due-date">Due in 20hrs</span></em>
+    </li>
+    <button class="complete-task-btn">Complete</button>
+    </li>
+    <!-- ... -->
+  
+
+  <div class="reward-popup" id="reward-popup">
+    <h2>Congratulations! You've completed the task!</h2>
+    <p>Your reward: $1</p>
+    <form id="reward-form">
+      <label>Select payout method:</label>
+      <select id="payout-method">
+        <option value="paypal">PayPal</option>
+        <option value="bank-transfer">Bank Transfer</option>
+        <option value="mobile-wallet">Mobile Wallet</option>
+      </select>
+      <button type="button" id="claim-reward-btn">Claim Reward</button>
+    </form>
+  </div>
   </ul>
   <br><br><br>
   <fieldset>
@@ -267,30 +291,8 @@ I highly recommend Izic Pay-go to fellow CEOs and business leaders seeking to em
 <style>
    body{
     font-family: fantasy;
-  background-color: #ffffff; 
-  transition: all 0.3s ease;
-  animation: color-change 5s infinite;
-}
-
-@keyframes color-change {
-  0% {
-    background-color:  yellow;
-  }
-  25% {
     background-color: #aec8d1;
-  }
-  50% {
-    background-color: #80ffc1;
-  }
-  75% {
-    background-color: white;
-  }
-  100% {
-    background-color: cyan;
-  }
-
-}
- 
+  
    #intro{
   min-height: 200px;
   background:url('IMG_20240915_160819.jpg') no-repeat;
@@ -378,8 +380,8 @@ I highly recommend Izic Pay-go to fellow CEOs and business leaders seeking to em
 
 
 <script>
-    alert('WELCOME')
-    prompt("what is your name");
+    alert(' WELCOME!')
+    prompt("what is your name!?");
     
    // JavaScript to handle task completion and reward popup
 document.addEventListener('DOMContentLoaded', () => {
@@ -390,7 +392,7 @@ document.addEventListener('DOMContentLoaded', () => {
   completeTaskBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
       // Mark task as completed
-      btn.textContent = 'Completed';
+      btn.textContent = 'send completed task screenshot via WhatsApp';
       btn.disabled = true;
       btn.parentElement.classList.add('task-completed');
 
