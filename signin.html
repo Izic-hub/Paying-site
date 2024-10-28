@@ -8,7 +8,7 @@
     <title>Paying Site</title>
 </head>
 <body>
-    <div class="logo">
+       <div class="logo">
   <svg width="300" height="150">
     <g>
      <path d="M100,50 C50,50 50,150 100,150 C150,150 150,50 100,50" fill="#93b4c4fa" /> 
@@ -21,47 +21,22 @@
    <center><h1 id="hd"><b><kbd>Pay-go</kbd></b></h1></center>
    
     <fieldset>
-     <legend><big><strong>Sign up</strong></big></legend>
+     <legend><big><strong>Sign in</strong></big></legend>
      <form id="signup-form" action="main.html">
         <input type="file" id="photo-input" accept="image/*" required>
         <div id="uploaded-photo"></div>
 
-        <input type="text" placeholder="First name" autocomplete autofocus required>
+        <input type="text" placeholder="user name" required>
         <br>
-        <input type="text" placeholder="Last name" required>
+        <input type="password" id="create-password" minlength="6" maxlength="8" placeholder="Password" required>
         <br>
-        <input type="email" placeholder="email@gmail.com" required>
-        <br>
-        <input type="password" id="create-password" minlength="6" maxlength="8" placeholder="Create password" required>
-        <br>
-        <input type="password" id="confirm-password" minlength="6" maxlength="8" placeholder="Confirm password" required>
-        <br> 
-        <input type="tel" maxlength="10" placeholder="Valid acct details" required>
-        <input type="text" placeholder="Acc name" required>
-        <br><br>
-        <select>
-         <option label="Current status of occupation"></option> 
-            <option>Student</option>
-            <option>Employed</option>
-            <option>Unemployed</option>
-            <option>Skill Worker</option>
-            <option>Others...</option>
-        </select>
-        <br>
-        <input type="tel" maxlength="6" id="coupon" placeholder="Coupon code" required>
-        <br>
-        <button id="get"><a id="gc" href="https://wa.me/+2349064178174?text=i+will+like+to+purchase+the+code.">Get code</a></button>
-        <br>
-       <b><em>you will be charged a service fee of ₦500 Nigeria currency</em></b>
-        <br><br>
-      <input type="checkbox" id="click" required>by clicking here you are sure that the data given are correct.
-        <center>
-            <button type="submit" class="button_1" id="submit-btn"><b>Proceed</b></button>
+           <input type="tel" maxlength="6" id="coupon" placeholder="Coupon code" required>
+              <br>
+       <center>
+            <button type="submit" class="button_1" id="submit-btn"><b>Login</b></button>
         </center>
-    <p>already have an account: <a href="signin.html" id="signin">Sign in.</a></p>
      </form>
     </fieldset>
- 
 
     <footer>
       <p><kbd>Izic✨ pay-go</kbd>, Copyright &copy;2024</p>
@@ -71,8 +46,7 @@
 </html>
 
 <style>
-    
-  .logo svg {
+     .logo svg {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
@@ -146,7 +120,7 @@ button{
     margin-left: 4%;
     padding-left: 8px;
     font-family: fantasy;
-    color: #93b4c4fa;
+    color: #93b4c4fa; 
     font-size: 20px;
     font-weight: bold;
     text-align: center;
@@ -163,26 +137,26 @@ button{
     margin-left: 4%;
     padding-left: 8px;
     font-family: fantasy;
-  /*  background-color: #007bff; 
-    color: #ffffff;    */
+    background-color: #007bff;
+    color: #ffffff;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
     cursor: pointer;
-  background-color: #93b4c4fa; 
+  background-color: red; 
   transition: all 0.3s ease;
   animation: color-change 5s infinite;
 }
 
 @keyframes color-change {
   0% {
-    background-color: #93b4c4fa;
+    background-color: red;
   }
   25% {
     background-color: yellow;
   }
   50% {
-    background-color: #93b4c4fa;
+    background-color: green;
   }
   75% {
     background-color: white;
@@ -192,9 +166,7 @@ button{
   }
 
 }
-      a{
-            text-decoration: none;
-        }
+
   #click{
           width: 20px;
           height:20px;
@@ -231,7 +203,7 @@ button{
            font-size: 20px;
            background-color: #e0d7bba9;
        }
-      footer{
+          footer{
   padding:20px;
   margin-top:20px;
   color: black;
@@ -248,12 +220,6 @@ button{
     margin-left: 4%;
     padding-left: 8px;
     font-family: fantasy;
-    }
-       #signin{
-           font-size: 27px;
-           color: green;
-       }
-         
 </style>
 
 
@@ -261,6 +227,7 @@ button{
 // Handling photo upload (as in your script)
 const photoInput = document.querySelector('#photo-input');
 const uploadedPhotoDiv = document.querySelector('#uploaded-photo');
+
 
 photoInput.addEventListener('change', uploadPhoto);
 
@@ -303,20 +270,17 @@ document.querySelector('#signup-form').addEventListener('submit', function(event
   event.preventDefault();
 
   const createPassword = document.querySelector('#create-password').value;
-  const confirmPassword = document.querySelector('#confirm-password').value;
-  const couponCode = document.querySelector('#coupon').value;
+   
+     const couponCode = document.querySelector('#coupon').value;
 
-  // Check if passwords match
-  if (createPassword !== confirmPassword) {
-    alert('Passwords do not match!');
-    return;
-  }
-
+   
   // Check if coupon code is valid
   if (couponCode !== '135700') {
     alert('Invalid coupon code! Please enter the correct code.');
     return;
   }
+  
+   
 
   // If everything is correct, submit the form
   alert('Form submitted successfully!');
