@@ -1,325 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="izic.jpg">
-    <title>Paying Site</title>
-</head>
-<body>
-    <div class="logo">
-  <svg width="300" height="150">
-    <g>
-     <path d="M100,50 C50,50 50,150 100,150 C150,150 150,50 100,50" fill="#93b4c4fa" /> 
-       <path d="M70,70 H130 V130 H70 L70,70" fill="#ffffffed" /> 
-      
-      <text x="100" y="110" font-size="19" text-anchor="middle" fill="">izic✨</text>
-    </g>
-  </svg>
-</div>
-   <center><h1 id="hd"><b><kbd>Pay-go</kbd></b></h1></center>
-   
-    <fieldset>
-     <legend><big><strong>Sign up</strong></big></legend>
-     <form id="signup-form" action="main.html">
-        <input type="file" id="photo-input" accept="image/*" required>
-        <div id="uploaded-photo"></div>
 
-        <input type="text" placeholder="First name" autocomplete autofocus required>
-        <br>
-        <input type="text" placeholder="Last name" required>
-        <br>
-        <input type="email" placeholder="email@gmail.com" required>
-        <br>
-        <input type="password" id="create-password" minlength="6" maxlength="8" placeholder="Create password" required>
-        <br>
-        <input type="password" id="confirm-password" minlength="6" maxlength="8" placeholder="Confirm password" required>
-        <br> 
-        <input type="tel" maxlength="10" placeholder="Valid acct details" required>
-        <input type="text" placeholder="Acc name" required>
-        <br><br>
-        <select>
-         <option label="Current status of occupation"></option> 
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="style.css">
+   <link rel="icon" href="izic.jpg">
+   <title>Paying Site</title>
+</head>
+
+<body>
+   <div>
+      <input id="line" type="text" disabled>
+      <img src="myphoto.png" alt="" />
+   </div>
+   <br /><br>
+   
+   <fieldset>
+      <legend><big><strong>Sign up</strong></big></legend>
+      <form id="signup-form" action="main.html">
+         
+         <input type="text" placeholder="First name" autocomplete autofocus required>
+         <br>
+         <input type="text" placeholder="Last name" required>
+         <br>
+         <input type="email" placeholder="email@gmail.com" required>
+         <br>
+         <input type="password" id="create-password" minlength="6" maxlength="8" placeholder="Create password" required>
+         <br>
+         <input type="password" id="confirm-password" minlength="6" maxlength="8" placeholder="Confirm password" required>
+         <br>
+         <input type="tel" maxlength="10" placeholder="Valid acct details" required><br>
+         <input type="text" placeholder="Acc name" required>
+         <br><br>
+         <select>
+            <option label="Current status of occupation"></option>
             <option>Student</option>
             <option>Employed</option>
             <option>Unemployed</option>
             <option>Skill Worker</option>
             <option>Others...</option>
-        </select>
-        <br>
-        <input type="tel" maxlength="6" id="coupon" placeholder="Coupon code" required>
-        <br>
-        <button id="get"><a id="gc" href="https://wa.me/+2349064178174?text=i+will+like+to+purchase+the+code.">Get code</a></button>
-        <br>
-       <b><em>you will be charged a service fee of ₦500 Nigeria currency</em></b>
-        <br><br>
-      <input type="checkbox" id="click" required>by clicking here you are sure that the data given are correct.
-        <center>
+         </select>
+         <br>
+         <input type="tel" maxlength="6" id="coupon" placeholder="Coupon code" required>
+         <br>
+         <button id="get"><a id="gc" href="https://wa.me/+2349064178174?text=i+will+like+to+purchase+the+code.">Get code</a></button>
+         <br>
+         <b><em>you will be charged a service fee of ₦500 Nigeria currency</em></b>
+         <br><br>
+         <input type="checkbox" id="click" required>by clicking here you are sure that the data given are correct.
+         <center>
             <button type="submit" class="button_1" id="submit-btn"><b>Proceed</b></button>
-        </center>
-    <p>already have an account: <a href="signin.html" id="signin">Sign in.</a></p>
-     </form>
-    </fieldset>
- 
-
-    <footer>
-      <p><kbd>Izic✨ pay-go</kbd>, Copyright &copy;2024</p>
-    </footer>
-    <script src="script.js"></script>
+         </center>
+         <p>already have an account: <a href="signin.html" id="signin">Sign in.</a></p>
+      </form>
+   </fieldset>
+   
+   
+   <footer>
+      <p><kbd>Izic✨ pay-go</kbd>, Copyright &copy;2025</p>
+   </footer>
+   <script src="script.js"></script>
 </body>
+
 </html>
 
 <style>
-    
-  .logo svg {
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.logo path {
-  stroke: #666;
-  stroke-width: 2;
-}
-
-.logo text {
-  font-family: fantasy;
-  }
-      #hd{
-        color: #93b4c4fa;
-     }
-     body{
-  font-family: Arial, sans-serif;
-}
-
-#upload-form {
-  width: 50%;
-  margin: 40px auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#photo-input {
-  width: 100%;
-  padding: 10px;
-  font-size: 12px;
-}
-
-#upload-button {
-  background-color: #4CAF50;
-  color: #fff;
-  padding: 0;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#upload-button:hover {
-  background-color: #3e8e41;
-}
-
-#uploaded-photo {
-  margin-top: 20px;
-}
-
-   input{
-    width: 250px;
-    height: 40px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 7px black;
-    border: none;
-    margin-top: 6%;
-    margin-left: 4%;
-    padding-left: 8px;
-    font-family: fantasy;
-}
-
-button{
-    width: 150px;
-    height: 40px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 7px black;
-    border: none;
-    margin-top: 6%;
-    margin-left: 4%;
-    padding-left: 8px;
-    font-family: fantasy;
-    color: #93b4c4fa;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-}
-
-#get{
-    width: 130px;
-    height: 40px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 7px black;
-    border: none;
-    margin-top: 6%;
-    margin-left: 4%;
-    padding-left: 8px;
-    font-family: fantasy;
-  /*  background-color: #007bff; 
-    color: #ffffff;    */
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-  background-color: #93b4c4fa; 
-  transition: all 0.3s ease;
-  animation: color-change 5s infinite;
-}
-
-@keyframes color-change {
-  0% {
-    background-color: #93b4c4fa;
-  }
-  25% {
-    background-color: yellow;
-  }
-  50% {
-    background-color: #93b4c4fa;
-  }
-  75% {
-    background-color: white;
-  }
-  100% {
-    background-color: cyan;
-  }
-
-}
-      a{
-            text-decoration: none;
-        }
-  #click{
-          width: 20px;
-          height:20px;
-          border-radius:10px;
-          box-shadow:1px 1px 7px black;
-          border: none;
-          margin-top:6%;
-          margin-left:4%;
-          padding-left: 8px;
-          font-family:fantasy;
-     }
-  select{
-  background-color: #24271751;
-  padding: 1em;
-  margin-bottom: 10px;
-  border-radius: 10px;
-               height: 40px;
-               width: 267px;
-               border-radius:10px;
-               box-shadow:1px 1px 7px black;
-               border:none;
-               margin-top:6%;
-               margin-left:3%;
-              padding-left:8px;
-              font-family:fantasy;
-}
-     fieldset{
-         border-radius: 5px;
+   body {
+      background-color: #d5f4ff8f;
    }
-       *{
-           background-color: #eaffff;
-       }
-       #gc{
-           font-size: 20px;
-           background-color: #e0d7bba9;
-       }
-      footer{
-  padding:20px;
-  margin-top:20px;
-  color: black;
-  background-color: #aec8d1;
-  text-align: center;
-}
- #photo-input{
-    width: 60px;
-    height: 20px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 7px black;
-    border: none;
-    margin-top: 6%;
-    margin-left: 4%;
-    padding-left: 8px;
-    font-family: fantasy;
-    }
-       #signin{
-           font-size: 27px;
-           color: green;
-       }
-         
+   
+   img {
+      float: right;
+      border: 0.5px solid darkcyan;
+      border-radius: 55px 45px;
+      width: 50px;
+      aspect-ratio: 10/7;
+      color: #fff;
+      box-shadow: 5px 4px 3px #1B1C20D9;
+   }
+   
+   #line {
+      max-width: 530px;
+      height: 0.25px;
+      background-color: #222337;
+      outline: none;
+      
+   }
+   
+   input {
+      width: 250px;
+      height: 40px;
+      border-radius: 10px;
+      box-shadow: 1px 1px 5px slategrey;
+      border: none;
+      margin-top: 6%;
+      margin-left: 4%;
+      padding-left: 8px;
+      font-family: fantasy;
+      outline: none;
+   }
+   
+   button {
+      width: 150px;
+      height: 40px;
+      border-radius: 10px;
+      box-shadow: 1px 1px 7px slategrey;
+      border: none;
+      margin-top: 6%;
+      margin-left: 4%;
+      padding-left: 8px;
+      font-family: fantasy;
+      color: #93b4c4fa;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+   }
+   
+   #get {
+      width: 130px;
+      height: 40px;
+      border-radius: 10px;
+      box-shadow: 1px 1px 7px black;
+      border: none;
+      margin-top: 6%;
+      margin-left: 4%;
+      padding-left: 8px;
+      font-family: fantasy;
+      /*  background-color: #007bff; 
+    color: #ffffff;    */
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+      background-color: #93b4c4fa;
+      transition: all 0.3s ease;
+      animation: color-change 5s infinite;
+   }
+   
+   @keyframes color-change {
+      0% {
+         background-color: #93b4c4fa;
+      }
+      
+      25% {
+         background-color: yellow;
+      }
+      
+      50% {
+         background-color: #93b4c4fa;
+      }
+      
+      75% {
+         background-color: white;
+      }
+      
+      100% {
+         background-color: cyan;
+      }
+      
+   }
+   
+   a {
+      text-decoration: none;
+   }
+   
+   #click {
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      box-shadow: 1px 1px 7px black;
+      border: none;
+      margin-top: 6%;
+      margin-left: 4%;
+      padding-left: 8px;
+      font-family: fantasy;
+   }
+   
+   select {
+      background-color: #24271751;
+      padding: 1em;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      height: 40px;
+      width: 267px;
+      border-radius: 10px;
+      box-shadow: 1px 1px 7px black;
+      border: none;
+      margin-top: 6%;
+      margin-left: 3%;
+      padding-left: 8px;
+      font-family: fantasy;
+   }
+   
+   fieldset {
+      border-radius: 5px;
+   }
+   
+   #gc {
+      font-size: 20px;
+      background-color: #e0d7bba9;
+   }
+   
+   footer {
+      padding: 20px;
+      margin-top: 20px;
+      color: #ffffff;
+      background-color: #aec8d1;
+      text-align: center;
+   }
+   
+   #signin {
+      font-size: 27px;
+      color: green;
+   }
 </style>
 
 
 <script>
-// Handling photo upload (as in your script)
-const photoInput = document.querySelector('#photo-input');
-const uploadedPhotoDiv = document.querySelector('#uploaded-photo');
-
-photoInput.addEventListener('change', uploadPhoto);
-
-function uploadPhoto() {
-  const file = photoInput.files[0];
-  const allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
-  const fileType = file.type.split('/')[1];
-
-  if (!allowedExtensions.includes(fileType)) {
-    alert('Only images are allowed!');
-    photoInput.value = '';
-    return;
-  }
-
-  const reader = new FileReader();
-  reader.onload = (e) => {
-    const photoData = e.target.result;
-    uploadedPhotoDiv.innerHTML = `<img src="${photoData}" width="100" height="100">`;
-
-    // Simulating AJAX request to upload photo
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'upload.php', true);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.send(`photo=${photoData}`);
-
-    xhr.onload = () => {
-      if (xhr.status === 200) {
-        console.log('Photo uploaded successfully!');
-      } else {
-        console.log('Error uploading photo!');
+ 
+   // Form validation
+   document.querySelector('#signup-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      const createPassword = document.querySelector('#create-password').value;
+      const confirmPassword = document.querySelector('#confirm-password').value;
+      const couponCode = document.querySelector('#coupon').value;
+      
+      // Check if passwords match
+      if (createPassword !== confirmPassword) {
+         alert('Passwords do not match!');
+         return;
       }
-    };
-  };
-
-  reader.readAsDataURL(file);
-}
-
-// Form validation
-document.querySelector('#signup-form').addEventListener('submit', function(event) {
-  event.preventDefault();
-
-  const createPassword = document.querySelector('#create-password').value;
-  const confirmPassword = document.querySelector('#confirm-password').value;
-  const couponCode = document.querySelector('#coupon').value;
-
-  // Check if passwords match
-  if (createPassword !== confirmPassword) {
-    alert('Passwords do not match!');
-    return;
-  }
-
-  // Check if coupon code is valid
-  if (couponCode !== '135700') {
-    alert('Invalid coupon code! Please enter the correct code.');
-    return;
-  }
-
-  // If everything is correct, submit the form
-  alert('Form submitted successfully!');
-  this.submit();  // Allows the form to be submitted now
-});
+      
+      // Check if coupon code is valid
+      if (couponCode !== '135700') {
+         alert('Invalid coupon code! Please enter the correct code.');
+         return;
+      }
+      
+      // If everything is correct, submit the form
+      alert('Form submitted successfully!');
+      this.submit(); // Allows the form to be submitted now
+   });
 </script>

@@ -11,8 +11,7 @@
 
 <body>
    <div>
-      <b id="daily">~D a s h b o a r d</b>
-      
+      <b id="daily">Creative Task~</b>
       <img src="myphoto.png" alt="" />
    </div>
    <br /><br>
@@ -32,17 +31,22 @@
       </div>
       
       
-      
       <div class="filter-buttons">
          <button class="filter-button"><a href="daily.html">Daily</a></button>
          <button class="filter-button"><a href="social.html">Social</a></button>
-         <button class="filter-button"><a href="creative.html">Creative</a></button>
+         <button id="dailyTask" class="filter-button">Creative</button>
       </div>
    </div>
    
-   
-   
-   
+   <section>
+      <ul>
+         <li>Design a funny meme related to our brand </li><br>
+         <li>take the below survey</li><br>
+         <li>creat an imaginary graphics of your interest on type of business you Love and will like to start-up</li><br>
+         <li></li>
+      </ul>
+   </section>
+   <br /><br>
    <fieldset>
       <legend><big><strong>HINT🧐...</strong></big></legend>
       
@@ -90,9 +94,13 @@
       font-family: cursive;
    }
    
+   #dailyTask {
+      color: orange;
+   }
+   
    a {
       text-decoration: none;
-      color: orange;
+      color: black;
    }
    
    .progress-bar {
@@ -123,7 +131,6 @@
       cursor: pointer;
    }
    
-   
    #wah {
       color: green;
    }
@@ -153,12 +160,10 @@
 <script>
    //the emoji
    function showRewardStore() {
-      // Implement reward redemption system here
       alert('Reward Store Coming Soon!');
    }
-      //withdraw
+   //withdraw
    function withDraw() {
-      alert('Withdrawal pending...');
+      alert('Go to Dashboard...');
    }
-   
 </script>
