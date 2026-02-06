@@ -4,20 +4,21 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" href="style.css">
-   <link rel="icon" href="izic.jpg">
+   <link rel="stylesheet" href="./style.css">
+   <link rel="icon" href="Image/izic.jpg">
    <title>Paying Site</title>
 </head>
 
 <body>
-   <div>
-      <input id="line" type="text" disabled>
-      <img src="myphoto.png" alt="" />
+   <div >
+            <!-- <input id="line" type="text" disabled> -->
+      <img src="Image/myphoto.png" alt="" />
+      
    </div>
    <br /><br>
    
    <fieldset>
-      <legend><big><strong>Sign in</strong></big></legend>
+      <legend><strong>Sign in</strong></legend>
       <form id="signup-form" action="main.html">
          
          <input type="text" placeholder="user name" required>
@@ -26,113 +27,17 @@
          <br>
          <input type="tel" maxlength="6" id="coupon" placeholder="Coupon code" required>
          <br>
-         <center>
             <button type="submit" class="button_1" id="submit-btn"><b>Login</b></button>
-         </center>
       </form>
    </fieldset>
    
-   <footer>
-      <p><kbd>Izic✨ pay-go</kbd>, Copyright &copy;2025</p>
-   </footer>
-   <script src="script.js"></script>
+   
+        <footer class="footer">
+            <h4>Pay-Go</h4>
+            <p>&copy; Copyright <span id="year">Footer</span></p>
+
+        </footer>
+   <script src="./script.js"></script>
 </body>
 
 </html>
-
-<style>
-   body {
-      background-color: #d5f4ff8f;
-      
-   }
-   
-   img {
-      float: right;
-      border: 0.5px solid darkcyan;
-      border-radius: 55px 45px;
-      width: 50px;
-      aspect-ratio: 10/7;
-      color: #fff;
-      box-shadow: 5px 4px 3px #1B1C20D9;
-   }
-   
-   #line {
-      max-width: 530px;
-      height: 0.25px;
-      background-color: #222337;
-      outline: none;
-      
-   }
-   
-   input {
-      width: 250px;
-      height: 40px;
-      border-radius: 10px;
-      box-shadow: 1px 1px 5px slategrey;
-      border: none;
-      margin-top: 6%;
-      margin-left: 4%;
-      padding-left: 8px;
-      font-family: fantasy;
-      outline: none;
-   }
-   
-   button {
-      width: 150px;
-      height: 40px;
-      border-radius: 10px;
-      box-shadow: 1px 1px 7px slategray;
-      border: none;
-      margin-top: 6%;
-      margin-left: 4%;
-      padding-left: 8px;
-      font-family: fantasy;
-      color: #93b4c4fa;
-      font-size: 20px;
-      font-weight: bold;
-      text-align: center;
-      cursor: pointer;
-   }
-   
-
-   fieldset {
-      display: flex;
-      align-self: center;
-      border-radius: 5px;
-      max-width: 700px;
-   }
-   
-   footer {
-      padding: 20px;
-      margin-top: 20px;
-      color: #ffffff;
-      background-color: #aec8d1;
-      text-align: center;
-   }
-</style>
-
-
-<script>
-
-   // Form validation
-   document.querySelector('#signup-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      
-      const createPassword = document.querySelector('#create-password').value;
-      
-      const couponCode = document.querySelector('#coupon').value;
-      
-      
-      // Check if coupon code is valid
-      if (couponCode !== '135700') {
-         alert('Invalid coupon code! Please enter the correct code.');
-         return;
-      }
-      
-      
-      
-      // If everything is correct, submit the form
-      alert('Form submitted successfully!');
-      this.submit(); // Allows the form to be submitted now
-   });
-</script>

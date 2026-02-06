@@ -6,22 +6,22 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <title>paying site</title>
    <link rel="icon" href="izic.jpg">
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+      <article class="allMain">
+
    <div>
-      <b id="daily">Creative Task~</b>
-      <img src="myphoto.png" alt="" />
+      <b id="task">Creative Task~</b>
+    <a href="main.html">  <img   src="Image/myphoto.png" alt="" /></a>
    </div>
    <br /><br>
    
-   <center>
-      <h1>WELCOME! to <br><kbd>Izic✨ pay-go </kbd></h1>
-   </center>
+      <h1 id="welcome_h1">WELCOME! to <br><kbd>Izic✨ pay-go </kbd></h1>
    
    
-   <big><strong><em>finish Task as required.</em></strong></big>
+   <strong><em>finish Task as required.</em></strong>
    <br><br>
    <div class="task-container">
       <b id="click" onclick="withDraw()">Withdraw💰</b>
@@ -34,7 +34,7 @@
       <div class="filter-buttons">
          <button class="filter-button"><a href="daily.html">Daily</a></button>
          <button class="filter-button"><a href="social.html">Social</a></button>
-         <button id="dailyTask" class="filter-button">Creative</button>
+         <button id="creativeTask" class="filter-button">Creative</button>
       </div>
    </div>
    
@@ -48,122 +48,26 @@
    </section>
    <br /><br>
    <fieldset>
-      <legend><big><strong>HINT🧐...</strong></big></legend>
+      <legend><strong>send screenshoot below!......</strong></legend>
       
       <ul>
          <li><em>send screenshots of completed task to Whatsapp below and get rewarded there instantly</em></li>
       </ul>
       <br>
-      <center> <b><em><a href="https://wa.me/+2349064178174?text=my+task+submission!"><big><b id="wah">Whatsapp!</b></big></a></em></b></center>
+      <b><em><a href="https://wa.me/+2349064178174?text=my+task+submission!"><b id="wah">Whatsapp!</b></a></em></b>
    </fieldset>
    
    <div class="reward-store-button" onclick="showRewardStore()">🎁</div>
    
-   <footer>
-      <p><kbd>Izic✨ pay-go</kbd>, Copyright &copy;2025</p>
-   </footer>
-   <script src="script.js"></script>
+   
+        <footer class="footer">
+            <h4>Pay-Go</h4>
+            <p>&copy; Copyright <span id="year">Footer</span></p>
+
+        </footer>
+
+        </article>
+   <script src="./script.js"></script>
 </body>
 
 </html>
-
-
-
-<style>
-   body {
-      background-color: #d5f4ff8f;
-      font-family: fantasy;
-   }
-   
-   img {
-      float: right;
-      border: 0.5px solid darkcyan;
-      border-radius: 55px 45px;
-      width: 50px;
-      aspect-ratio: 10/7;
-      color: #fff;
-      box-shadow: 5px 4px 3px #1B1C20D9;
-   }
-   
-   #click {
-      float: right;
-   }
-   
-   #daily {
-      float: left;
-      font-family: cursive;
-   }
-   
-   #dailyTask {
-      color: orange;
-   }
-   
-   a {
-      text-decoration: none;
-      color: black;
-   }
-   
-   .progress-bar {
-      width: 100%;
-      height: 20px;
-      background: #ecf0f1;
-      border-radius: 10px;
-      margin: 10px 0;
-   }
-   
-   .progress-fill {
-      height: 100%;
-      background: #3498db;
-      border-radius: 10px;
-      transition: width 0.5s ease;
-   }
-   
-   .filter-buttons {
-      margin: 20px 0;
-      text-align: center;
-   }
-   
-   .filter-button {
-      margin: 20px;
-      padding: 8px 15px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-   }
-   
-   #wah {
-      color: green;
-   }
-   
-   .reward-store-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      padding: 15px;
-      background: #e67e22;
-      color: white;
-      border-radius: 50%;
-      cursor: pointer;
-   }
-   
-   footer {
-      padding: 20px;
-      margin-top: 20px;
-      color: #ffffff;
-      background-color: #aec8d1;
-      text-align: center;
-   }
-</style>
-
-
-
-<script>
-   //the emoji
-   function showRewardStore() {
-      alert('Reward Store Coming Soon!');
-   }
-   //withdraw
-   function withDraw() {
-      alert('Go to Dashboard...');
-   }
-</script>
