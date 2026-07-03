@@ -1,59 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>paying site</title>
-   <link rel="icon" href="izic.jpg">
-   <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard — Pay-Go</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./Image/izic.jpg">
 </head>
+<body class="dashboard-page">
 
-<body>
-      <article class="allMain">
+  <div class="dashboard-header">
+    <div class="dh-left">
+      <span class="dh-title">~ Dashboard</span>
+    </div>
+    <a href="index.html">
+      <img src="./Image/myphoto.png" alt="Pay-Go" class="dashboard-logo" onclick="payGo()">
+    </a>
+  </div>
 
-   <div>
-      <b id="daily">~D a s h b o a r d</b>
-      
-      <img src="Image/myphoto.png" alt="" />
-   </div>
-   <br /><br>
-   
-      <h1 id="welcome_h1">WELCOME! to <br><kbd>Izic✨ pay-go </kbd></h1>
-   
-   
-   <strong><em>finish Task as required.</em></strong>
-   <br><br>
-   <div class="task-container">
-      <b id="click" onclick="withDraw()">Withdraw💰</b>
-      <br>
-      <div class="progress-bar">
-         <div class="progress-fill" id="progressFill"></div>
+  <div class="dashboard-body">
+    <div class="welcome-banner">
+      <h1>Welcome to Izic✨ Pay-Go</h1>
+      <p>Complete your tasks to unlock rewards and withdrawals.</p>
+    </div>
+
+    <!-- Balance -->
+    <div class="balance-row">
+      <div class="balance-info">
+        <div class="label">Available Balance</div>
+        <div class="amount">₦0.00</div>
       </div>
-      
-      <div class="filter-buttons">
-         <button class="filter-button"><a id="a_main" href="daily.html">Daily</a></button>
-         <button class="filter-button"><a id="a_main" href="social.html">Social</a></button>
-         <button class="filter-button"><a id="a_main"  href="creative.html">Creative</a></button>
-      </div>
-   </div>
-   
-   <fieldset>
-      <legend><strong>send screenshoot below!...</strong></legend>
-       <b><em><a href="https://wa.me/+2349064178174?text=my+task+submission!"><b id="wah">Whatsapp!</b></a></em></b>
-   </fieldset>
-   
-   <div class="reward-store-button" onclick="showRewardStore()">🎁</div>
-   
-   
-        <footer class="footer">
-            <h4>Pay-Go</h4>
-            <p>&copy; Copyright <span id="year">Footer</span></p>
+      <button class="withdraw-btn" onclick="withDraw()">💰 Withdraw</button>
+    </div>
 
-        </footer>
-        </article>
-   <script src="./script.js"></script>
+    <!-- Progress -->
+    <div class="progress-label">
+      <span>Daily Progress</span>
+      <span id="progress-pct">0%</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <!-- Task Tabs -->
+    <div class="task-tabs">
+      <button class="task-tab active"><a href="daily.html">📅 Daily</a></button>
+      <button class="task-tab"><a href="social.html">🌐 Social</a></button>
+      <button class="task-tab"><a href="creative.html">🎨 Creative</a></button>
+    </div>
+
+    <!-- Tasks Overview -->
+    <div class="task-list">
+      <div class="task-item">
+        <span class="task-icon">📅</span>
+        <div class="task-info">
+          <h4>Daily Task</h4>
+          <p>Visit the site daily to claim your reward</p>
+        </div>
+        <span class="task-badge">+₦50</span>
+      </div>
+      <div class="task-item">
+        <span class="task-icon">🌐</span>
+        <div class="task-info">
+          <h4>Social Task</h4>
+          <p>Visit partner sites and complete social tasks</p>
+        </div>
+        <span class="task-badge">+₦100</span>
+      </div>
+      <div class="task-item">
+        <span class="task-icon">🎨</span>
+        <div class="task-info">
+          <h4>Creative Task</h4>
+          <p>Design memes, take surveys, and submit creative work</p>
+        </div>
+        <span class="task-badge">+₦150</span>
+      </div>
+    </div>
+
+    <!-- Submit box -->
+    <div class="submit-box">
+      <h3>📸 Submit Your Completed Tasks</h3>
+      <p>Send screenshots of completed tasks to WhatsApp and get rewarded instantly.</p>
+      <a href="https://wa.me/+2349064178174?text=my+task+submission!" class="wa-btn">
+        💬 Send to WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <!-- Reward FAB -->
+  <div class="reward-fab" onclick="showRewardStore()" title="Reward Store">🎁</div>
+
+  <footer class="footer">
+    <h4>Pay-Go</h4>
+    <p>&copy; Copyright <span id="year"></span> · Izic✨ Pay-Go</p>
+  </footer>
+
+  <script src="./script.js"></script>
 </body>
-
 </html>
-

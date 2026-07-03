@@ -1,68 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" href="./style.css">
-   <link rel="icon" href="Image/izic.jpg">
-   <title>Paying Site</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign Up — Pay-Go</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./Image/izic.jpg">
 </head>
-
 <body>
-   <div>
-      <!-- <input id="line" type="text" disabled> -->
-      <img src="Image/myphoto.png" alt="" />
-   </div>
-   <br /><br>
-   
-   <fieldset>
-      <legend><strong>Sign up</strong></legend>
+  <div class="auth-page">
+    <div class="auth-logo">
+      <img src="./Image/myphoto.png" alt="Pay-Go Logo">
+      Izic✨ Pay-Go
+    </div>
+
+    <div class="auth-card">
+      <h2>Create Account</h2>
+      <p class="auth-sub">Join thousands earning daily. Takes under 2 minutes.</p>
+
       <form id="signup-form" action="main.html">
-         
-         <input type="text" placeholder="First name" autocomplete autofocus required>
-         <br>
-         <input type="text" placeholder="Last name" required>
-         <br>
-         <input type="email" placeholder="email@gmail.com" required>
-         <br>
-         <input type="password" id="create-password" minlength="6" maxlength="8" placeholder="Create password" required>
-         <br>
-         <input type="password" id="confirm-password" minlength="6" maxlength="8" placeholder="Confirm password" required>
-         <br>
-         <input type="tel" maxlength="10" placeholder="Valid acct details" required><br>
-         <input type="text" placeholder="Acc name" required>
-         <br><br>
-         <select>
-            <option label="Current status of occupation"></option>
+        <div class="form-group">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" placeholder="Your first name" autocomplete autofocus required>
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" placeholder="Your last name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="email@gmail.com" required>
+        </div>
+        <div class="form-group">
+          <label for="create-password">Create Password</label>
+          <input type="password" id="create-password" minlength="6" maxlength="8" placeholder="6–8 characters" required>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" minlength="6" maxlength="8" placeholder="Repeat password" required>
+        </div>
+        <div class="form-group">
+          <label for="acct-num">Account Number</label>
+          <input type="tel" id="acct-num" maxlength="10" placeholder="Valid account number" required>
+        </div>
+        <div class="form-group">
+          <label for="acct-name">Account Name</label>
+          <input type="text" id="acct-name" placeholder="Name on account" required>
+        </div>
+        <div class="form-group">
+          <label for="occupation">Occupation Status</label>
+          <select id="occupation">
+            <option value="" disabled selected>Select your status</option>
             <option>Student</option>
             <option>Employed</option>
             <option>Unemployed</option>
-            <option>Skill Worker</option>
-            <option>Others...</option>
-         </select>
-         <br>
-         <input type="tel" maxlength="6" id="coupon" placeholder="Coupon code" required>
-         <br>
-         <button id="get"><a id="gc" href="https://wa.me/+2349064178174?text=i+will+like+to+purchase+the+code.">Get code</a></button>
-         <br>
-         <b><em>you will be charged a service fee of ₦500 to get code</em></b>
-         <br><br>
-         <input type="checkbox" id="click" required>by clicking here you are sure that the data given are correct. <br>
-            <button type="submit" class="button_1" id="submit-btn"><b>Proceed</b></button>
-         
-         <p>already have an account: <a href="signin.html" id="signin">Sign in.</a></p>
+            <option>Skilled Worker</option>
+            <option>Others</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="coupon">Coupon Code</label>
+          <div class="coupon-row">
+            <input type="tel" id="coupon" maxlength="6" placeholder="Enter code" required>
+            <a href="https://wa.me/+2349064178174?text=i+will+like+to+purchase+the+code." class="btn-get-code">Get Code</a>
+          </div>
+          <p class="auth-fee-note">A service fee of ₦500 applies to get your code.</p>
+        </div>
+
+        <div class="checkbox-row">
+          <input type="checkbox" id="agree" required>
+          <span>I confirm that all information provided is accurate and I agree to the terms of service.</span>
+        </div>
+
+        <button type="submit" class="btn-primary">Create Account →</button>
       </form>
-   </fieldset>
-   
-   
-   
-        <footer class="footer">
-            <h4>Pay-Go</h4>
-            <p>&copy; Copyright <span id="year">Footer</span></p>
 
-        </footer>
-   <script src="./script.js"></script>
+      <p class="auth-switch">Already have an account? <a href="signin.html">Sign in</a></p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <h4>Pay-Go</h4>
+    <p>&copy; Copyright <span id="year"></span> · Izic✨ Pay-Go</p>
+  </footer>
+
+  <script src="./script.js"></script>
 </body>
-
 </html>
